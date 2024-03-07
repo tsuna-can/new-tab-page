@@ -2,10 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import GoogleSearchForm from "../components/GoogleSearchForm/GoogleSearchForm.tsx";
-import "../components/GoogleSearchForm/GoogleSearchForm.scss";
+import Clock from "../components/Clock/Clock.tsx";
 ---
 
 <Layout title="Welcome to Astro.">
+  <Clock client:only="react" />
   <GoogleSearchForm client:only="react" />
   <main>
     <svg

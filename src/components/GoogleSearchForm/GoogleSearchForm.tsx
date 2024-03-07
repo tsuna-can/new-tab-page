@@ -1,4 +1,5 @@
 import React from "react";
+import "./GoogleSearchForm.scss";
 
 const GoogleSearchForm: React.FC = () => {
   function search(event: React.FormEvent<HTMLFormElement>) {
