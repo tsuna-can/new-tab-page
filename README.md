@@ -1,6 +1,6 @@
 # New tabe page for Chrome
 
-Detfault start page for Chrome to use `Vimium`.
+Default start page for Chrome to use `Vimium`.
 
 ![](./images/new-tab-page.png)
 

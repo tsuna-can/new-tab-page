@@ -12,7 +12,7 @@ const GoogleSearchForm: React.FC = () => {
   return (
     <div>
       <form onSubmit={search}>
-        <input name="query" placeholder="Search Google" />
+        <input name="query" autoFocus={true} placeholder="Search Google" />
       </form>
     </div>
   );
