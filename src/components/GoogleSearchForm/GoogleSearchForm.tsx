@@ -1,7 +1,14 @@
 import type React from "react";
+import { useRef, useEffect } from "react";
 import "./GoogleSearchForm.scss";
 
 const GoogleSearchForm: React.FC = () => {
+	const inputRef = useRef<HTMLInputElement>(null);
+
+	useEffect(() => {
+		inputRef.current?.focus();
+	}, []);
+
 	function search(event: React.FormEvent<HTMLFormElement>) {
 		event.preventDefault();
 		const formData = new FormData(event.currentTarget);
@@ -12,7 +19,7 @@ const GoogleSearchForm: React.FC = () => {
 	return (
 		<div>
 			<form onSubmit={search}>
-				<input name="query" autoFocus={true} placeholder="Search Google" />
+				<input name="query" ref={inputRef} placeholder="Search Google" />
 			</form>
 		</div>
 	);
