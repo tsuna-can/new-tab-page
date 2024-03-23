@@ -5,12 +5,23 @@ import "./Clock.scss";
 
 const Clock: React.FC = () => {
 	const time = useTime();
-	const timeStr = format(time, "HH:mm:ss");
+	const hour = format(time, "HH");
+	const minute = format(time, "mm");
+	const second = format(time, "ss");
 	const dateStr = format(time, "yyyy/MM/dd");
+
 	return (
-		<div>
-			<h3>{dateStr}</h3>
-			<h1>{timeStr}</h1>
+		<div className="clock">
+			<p className="date-string">{dateStr}</p>
+			<div className="time">
+				<div className="time-string">
+					<p className="number">{hour}</p>
+					<p>:</p>
+					<p className="number">{minute}</p>
+					<p>:</p>
+					<p className="number">{second}</p>
+				</div>
+			</div>
 		</div>
 	);
 };

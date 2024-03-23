@@ -1,4 +1,4 @@
-div {
+.clock {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,14 +6,29 @@ div {
   margin-top: 20px;
 }
 
-h1 {
-  font-size: 50px;
+.date-string{
+  font-size: 20px;
+  font-weight: bold;
   color: #fff;
-  margin: 0;
+  letter-spacing: 1px;
 }
 
-h3 {
-  font-size: 20px;
+.time {
+  display: flex;
+  height: 80px;
+  width: 500px;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-string {
+  display: flex;
+  font-size: 50px;
+  font-weight: bold;
   color: #fff;
-  margin: 0;
+
+  .number {
+    width: 65px;
+    text-align: center;
+  }
 }
