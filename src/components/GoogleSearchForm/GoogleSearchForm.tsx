@@ -11,8 +11,8 @@ const GoogleSearchForm: React.FC = () => {
 
 	return (
 		<div>
-			<form onSubmit={search}>
-				<input name="query" placeholder="Search Google" />
+			<form onSubmit={search} className="form">
+				<input name="query" placeholder="Search Google" className="input" />
 			</form>
 		</div>
 	);
